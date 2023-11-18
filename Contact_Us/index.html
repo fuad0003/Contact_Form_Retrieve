@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #495057;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .contact-container {
+            display: flex;
+            max-width: 800px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .contact-image {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .contact-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top; /* Adjust object position as needed */
+        }
+
+        .contact-form {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .contact-form h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-form label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-form button {
+            background-color: #17a2b8; /* Updated color */
+            color: #fff;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #138496; /* Updated hover color */
+        }
+
+        .contact-form button:active {
+            background-color: #0a6b81; /* Updated active color */
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-image,
+            .contact-form {
+                max-width: 100%;
+            }
+
+            .contact-image {
+                height: 200px;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+        }
+    </style>
+    <title>Contact Us Form</title>
+</head>
+<body>
+
+    <div class="contact-container">
+        <div class="contact-image">
+            <img src="contact_us_icon.jpg" alt="Contact Us Image">
+        </div>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="databasecon.php" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="phone">Your Phone:</label>
+                <input type="tel" id="phone" name="phone">
+        
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+        
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+  
+</body>
+</html>
